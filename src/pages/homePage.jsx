@@ -39,6 +39,12 @@ const MovieListPage = (props) => {
     if (type === "title") setTitleFilter(value);
     else setGenreFilter(value);
   };
+  const addToFavourites = (movieId) => {
+    const updatedMovies = movies.map((m) =>
+      m.id === movieId ? { ...m, favourite: true } : m
+    );
+    setMovies(updatedMovies);
+  };
 
   useEffect(() => {
     fetch(
@@ -62,7 +68,7 @@ const MovieListPage = (props) => {
           <Header title={"Home Page"} />
         </Grid>
         <Grid item container spacing={5}>
-          <MovieList movies={displayedMovies}></MovieList>
+        <MovieList movies={displayedMovies} selectFavourite={addToFavourites} />
         </Grid>
       </Grid>
       <Fab

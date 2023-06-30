@@ -5,26 +5,29 @@ import Spinner from '../components/spinner';
 import { getUpcomingMovies } from '../api/tmdb-api';
 import AddToPlaylistIcon from '../components/cardIcons/addToPlaylist';
 
+
 const UpcomingMoviesPage = () => {
-  const { data, error, isLoading, isError } = useQuery('upcoming', getUpcomingMovies);
 
-  if (isLoading) {
-    return <Spinner />;
-  }
-
-  if (isError) {
-    return <h1>{error.message}</h1>;
-  }
-
-  const movies = data ? data : [];
-
-  return (
-    <PageTemplate
-      title="Upcoming Movies"
-      movies={movies}
-      action={(movie) => <AddToPlaylistIcon movie={movie} />} 
-    />
-  );
-};
-
-export default UpcomingMoviesPage;
+    const { data, error, isLoading, isError } = useQuery('upcoming', getUpcomingMovies);
+  
+    if (isLoading) {
+      return <Spinner />;
+    }
+  
+    if (isError) {
+      return <h1>{error.message}</h1>;
+    }
+  
+    const movies = data ? data : [];
+  
+    return (
+      <PageTemplate
+        title="Upcoming Movies"
+        movies={movies}
+        action={(movie) => <AddToPlaylistIcon movie={movie} />} 
+      />
+    );
+  };
+  
+  export default UpcomingMoviesPage;
+  

@@ -101,4 +101,19 @@ export const getMovie = (args) => {
       });
   };
   
+  export const getTVSeries = () => {
+    return fetch(
+      `https://api.themoviedb.org/3/discover/tv?api_key=${import.meta.env.VITE_TMDB_KEY}&language=en-US&sort_by=popularity.desc&with_original_language=en`
+    )
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.json().message);
+        }
+        return response.json();
+      })
+      .then((data) => data.results)
+      .catch((error) => {
+        throw error;
+      });
+  };
   

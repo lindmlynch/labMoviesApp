@@ -37,4 +37,4 @@ const MoviesContextProvider = (props) => {
   );
 };
 
-export default MoviesContextProvider;
+export default MoviesContextProvider;  

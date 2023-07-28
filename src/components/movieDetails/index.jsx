@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
@@ -32,7 +31,7 @@ const styles = {
 };
 
 const MovieDetails = ( {movie}) => {
-  const [drawerOpen, setDrawerOpen] = useState(false); // New
+  const [drawerOpen, setDrawerOpen] = useState(false); 
 
   return (
     <>

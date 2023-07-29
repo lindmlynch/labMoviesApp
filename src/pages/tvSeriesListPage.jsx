@@ -1,8 +1,10 @@
 import React from "react";
 import { useQuery } from "react-query";
 import { getTVSeries } from "../api/tmdb-api";
+import TVSeriesPageTemplate from "../components/templateSeriesListPage";
 
 const TVSeriesList = () => {
+
   const { data, error, isLoading, isError } = useQuery("tvSeries", getTVSeries);
 
   if (isLoading) {
@@ -17,12 +19,7 @@ const TVSeriesList = () => {
 
   return (
     <div>
-      <h1>TV Series List</h1>
-      <ul>
-        {tvSeries.map((tvShow) => (
-          <li key={tvShow.id}>{tvShow.name}</li>
-        ))}
-      </ul>
+      <TVSeriesPageTemplate tvSeries={tvSeries} title="TV Series List" />
     </div>
   );
 };

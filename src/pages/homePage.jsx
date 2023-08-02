@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PageTemplate from "../components/templateMovieListPage";
+import MovieListPageTemplate from "../components/templateMovieListPage";
 import { getMovies } from "../api/tmdb-api";
 import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
@@ -18,7 +18,7 @@ const HomePage = (props) => {
   const movies = data ? data.results : [];
 
   return (
-    <PageTemplate
+    <MovieListPageTemplate
       title="Discover Movies"
       movies={movies}
       action={(movie) => {

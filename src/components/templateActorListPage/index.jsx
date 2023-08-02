@@ -4,7 +4,7 @@ import Grid from "@mui/material/Grid";
 import Fab from "@mui/material/Fab";
 import Drawer from "@mui/material/Drawer";
 import FilterActorsCard from "../filterActorsCard";
-import ActorCard from "../actorCard";
+import ActorList from "../actorList";
 
 const styles = {
   root: {
@@ -18,50 +18,48 @@ const styles = {
   },
 };
 
-
 function PageTemplate({ actors, title }) {
-    const [nameFilter, setNameFilter] = useState("");
-    const [drawerOpen, setDrawerOpen] = useState(false);
-  
-    let displayedActors = actors.filter((actor) => {
-      return actor.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
-    });
-  
-    const handleNameFilterChange = (value) => {
-      setNameFilter(value);
-    };
-  
-    return (
-      <>
-        <Grid container sx={styles.root}>
-          <Grid item xs={12}>
-            <HeaderActorList title={title} />
-          </Grid>
-          <Grid item container spacing={5}>
-            {displayedActors.map((actor) => (
-              <Grid item key={actor.id}>
-                <ActorCard actor={actor} />
-              </Grid>
-            ))}
-          </Grid>
+  const [nameFilter, setNameFilter] = useState("");
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  let displayedActors = actors.filter((actor) => {
+    return actor.name.toLowerCase().search(nameFilter.toLowerCase()) !== -1;
+  });
+
+  const handleNameFilterChange = (value) => {
+    setNameFilter(value);
+  };
+
+  return (
+    <>
+      <Grid container sx={styles.root}>
+        <Grid item xs={12}>
+          <HeaderActorList title={title} />
         </Grid>
-        <Fab
-          color="secondary"
-          variant="extended"
-          onClick={() => setDrawerOpen(true)}
-          sx={styles.fab}
-        >
-          Filter
-        </Fab>
-        <Drawer
-          anchor="left"
-          open={drawerOpen}
-          onClose={() => setDrawerOpen(false)}
-        >
-          <FilterActorsCard onUserInput={handleNameFilterChange} nameFilter={nameFilter} />
-        </Drawer>
-      </>
-    );
-  }
-  
-  export default PageTemplate;
+        <Grid item container spacing={5}>
+          <ActorList actors={displayedActors} />
+        </Grid>
+      </Grid>
+      <Fab
+        color="secondary"
+        variant="extended"
+        onClick={() => setDrawerOpen(true)}
+        sx={styles.fab}
+      >
+        Filter
+      </Fab>
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+      >
+        <FilterActorsCard
+          onUserInput={handleNameFilterChange}
+          nameFilter={nameFilter}
+        />
+      </Drawer>
+    </>
+  );
+}
+
+export default PageTemplate;

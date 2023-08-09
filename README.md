@@ -1,15 +1,23 @@
 
 # Full Stack Development 2 - Assignment.
 
-__Name:__ [your full name]
+__Name:__ Linda Lynch
 
 ## Features.
 
 [A bullet-point list of the features developed for the React SPA app (only new/modified ones for the Movies app),]
 
-+ Feature X.
-+ Feature Y. 
-+ etc.
++ Top Rated Movies Page
++ Top Rated Movies Page hyperlinked to Movie Details Page
++ Top Rated Movies Page filtered by Genre
++ Actors Page
++ Actors Page hyperlinked to Actors Bio Page
++ Actors Filtered by Name
++ TV Series Page
++ TV Series Page Filtered by Name
++ Caching throughout
++ Create Fantasy Movie Form
+
 
 ## Feature Design.
 
@@ -17,73 +25,70 @@ __Name:__ [your full name]
 
 e.g. 
 
-#### Upcoming Movies.
+#### Top Rated Movies.
+![Screenshot 2023-08-09 191101](https://github.com/lindmlynch/labMoviesApp/assets/97634723/e580633b-e7fb-4760-8f70-da761e0ee73c)
 
-> Lists movies from the Upcoming movies endpoint of TMDB.
+> Lists Top Rated Movies of all time endpoint of TMDB.
 
-![][image1]
 
-#### Movies Reviews.
+#### Top Rated Movies More Info.
+![Screenshot 2023-08-09 191324](https://github.com/lindmlynch/labMoviesApp/assets/97634723/ded013d1-8750-44a4-9f9c-228c1b016518)
 
-> Lists all the reviews for a particular movie (shows text extract only).
+> Displays more info of the Top Rated Movies.
 
-![][image2]
 
-> Click the 'Full Review' link of a review extract to see the review's full text. 
+#### Top Rated Movies filtered by Genre.
+![Screenshot 2023-08-09 191250](https://github.com/lindmlynch/labMoviesApp/assets/97634723/57447f39-7284-42c6-b0f2-3e423c07d67b)
 
-![][image3]
+> Shows how the Top Rated Movies can be filtered by genre eg. comedy
 
-.... other features .......
 
-## Storybook.
+#### Actors Page.
+![Screenshot 2023-08-09 191425](https://github.com/lindmlynch/labMoviesApp/assets/97634723/d3c293ed-37fb-4e10-b978-84dc3df94073)
 
-[Include a screenshot(s) from the Storybook UI and highlight the stories for new components developed.]
+> Shows a list of popular actors endpoint of TMDB
 
-e.g.
 
-![][image5]
+#### Actors Bio.
+![Screenshot 2023-08-09 191500](https://github.com/lindmlynch/labMoviesApp/assets/97634723/56a7620a-195c-4873-a228-e1c2ec8ffc23)
 
-## Authentication. (if relevant)
+> Lists information about actors including bio, birthday and place of birth when info is available
 
-#### Protected routes 
 
-[List all the routes in your app and highlight those that are protected/private (require authentication).]
+#### Actors filtered by Name.
+![Screenshot 2023-08-09 191635](https://github.com/lindmlynch/labMoviesApp/assets/97634723/d4312ef8-1acf-456f-bf62-2c8bf8f662ff)
 
-e.g.
+> Shows how actors can be filtered by name
 
-+ /movies - List of 20  movies from the Discover endpoint,
-+ /movies/{movie_id} - Detailed information on a specific movie.
-+ /reviews/{review_id} (Protected) - The full text of a movie review.
-+ /movie/{movie_id}/similar - A list of similar movies. 
-+ /person/{person_id} (Protected) - A specific actor's bio.
-+ etc
-+ etc
 
-#### Protected functionality. (if relevant)
+#### TV Series Page
+![Screenshot 2023-08-09 191709](https://github.com/lindmlynch/labMoviesApp/assets/97634723/439c9010-3d6f-4009-8a4d-9525c869079c)
 
-[ Briefly state any app functionality that requires authentication, e.g. only authenticated users can tag a movie as a 'favourite'.]
+> Shows a list of popular TV series endpoint of TMDB
 
-#### Supabase (if relevant)
 
-[Include a screenshot(s) from your Supabase account that verifies its use for this app. ]
+#### TV Series filtered by Name
+![Screenshot 2023-08-09 191733](https://github.com/lindmlynch/labMoviesApp/assets/97634723/54ea8c9c-4bfb-453a-9e14-936f5d5b726c)
 
-## Deployment (if relevant).
+> Shows how TV series can be filtered by name
 
-[Specify the URL of your deployed app and include a screenshot(s) from your deployment platform account (e.g. Vercal) that verifies its use for this app. Set up a registered user for your app and specify their credentials.
 
-Username: test1 ; Password: pass1
-]
+#### Caching incorporated throughout the App
+![Screenshot 2023-08-09 191907](https://github.com/lindmlynch/labMoviesApp/assets/97634723/72b53616-5885-42be-aadf-da379a964986)
 
-## Persistence (if relevant).
+> An example of how caching is incorporated throughout the new features of the App.
 
-[If you are persisting data to the Supabase backend (e.g. favourite movies, fantasy movie), include screenshots with appropriate captions to verify this aspect. ]
 
-## Additional Information.
+#### Create Fantasy Movie Form
+![Screenshot 2023-08-09 192350](https://github.com/lindmlynch/labMoviesApp/assets/97634723/0e7a6ab8-06e4-4707-a764-ae2b60fcf9fc)
 
-[ Briefly explain any other aspects of your app's design or implementation that is non-standard and worthy of mention.]
+> Users can create their fantasy movie by inputting Title, Overview, Genres, Release Date, Runtime and Production Company(s)
 
-[image1]: ./images/image1.png
-[image2]: ./images/image2.png
-[image3]: ./images/image3.png
-[image4]: ./images/image4.png
-[image5]: ./images/image5.png
+
+
+
+
+
+
+
+

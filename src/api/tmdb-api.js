@@ -156,12 +156,15 @@ export const getMovie = (args) => {
     )
       .then((response) => {
         if (!response.ok) {
-          throw new Error(response.json().message);
-        }
-        return response.json();
-      })
-      .catch((error) => {
-        throw error;
-      });
+          return response.json().then((data) => {
+          throw new Error(data.message);
+        });
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
   };
+  
   

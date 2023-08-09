@@ -18,7 +18,7 @@ const styles = {
   },
 };
 
-function PageTemplate({ actors, title }) {
+function PageTemplate({ actors, title, action }) {
   const [nameFilter, setNameFilter] = useState("");
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -37,7 +37,7 @@ function PageTemplate({ actors, title }) {
           <HeaderActorList title={title} />
         </Grid>
         <Grid item container spacing={5}>
-          <ActorList actors={displayedActors} />
+          <ActorList actors={displayedActors} action={action} />
         </Grid>
       </Grid>
       <Fab

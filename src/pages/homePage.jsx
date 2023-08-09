@@ -6,7 +6,7 @@ import Spinner from "../components/spinner";
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
 const HomePage = (props) => {
-  const [currentPage, setCurrentPage] = useState(1); // Initialize current page to 1
+  const [currentPage, setCurrentPage] = useState(1); 
   const { data, error, isLoading, isError } = useQuery(["discover", currentPage], () => getMovies(currentPage));
 
   if (isLoading) {
@@ -36,7 +36,7 @@ const HomePage = (props) => {
         </button>
         <button
           onClick={() => setCurrentPage(currentPage + 1)}
-          disabled={movies.length === 0} // Disable if no more movies on next page
+          disabled={movies.length === 0} 
         >
           Next
         </button>

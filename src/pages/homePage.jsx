@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import MovieListPageTemplate from "../components/templateMovieListPage";
 import { getMovies } from "../api/tmdb-api";
 import { useQuery } from "react-query";
@@ -6,7 +6,8 @@ import Spinner from "../components/spinner";
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites';
 
 const HomePage = (props) => {
-  const { data, error, isLoading, isError } = useQuery("discover", getMovies);
+  const [currentPage, setCurrentPage] = useState(1); // Initialize current page to 1
+  const { data, error, isLoading, isError } = useQuery(["discover", currentPage], () => getMovies(currentPage));
 
   if (isLoading) {
     return <Spinner />;
@@ -18,13 +19,30 @@ const HomePage = (props) => {
   const movies = data ? data.results : [];
 
   return (
-    <MovieListPageTemplate
-      title="Discover Movies"
-      movies={movies}
-      action={(movie) => {
-        return <AddToFavouritesIcon movie={movie} />
-      }}
-    />
+    <div>
+      <MovieListPageTemplate
+        title="Discover Movies"
+        movies={movies}
+        action={(movie) => {
+          return <AddToFavouritesIcon movie={movie} />
+        }}
+      />
+      <div>
+        <button
+          onClick={() => setCurrentPage(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <button
+          onClick={() => setCurrentPage(currentPage + 1)}
+          disabled={movies.length === 0} // Disable if no more movies on next page
+        >
+          Next
+        </button>
+      </div>
+    </div>
   );
 };
+
 export default HomePage;

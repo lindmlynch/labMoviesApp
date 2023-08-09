@@ -95,6 +95,11 @@ e.g.
 
 
 
+### Pagination
+#![Screenshot 2023-08-09 202532](https://github.com/lindmlynch/labMoviesApp/assets/97634723/3d25ca11-b833-413d-b1ff-a05465178a89)
+
+> Pagination incorporated into the Home Page
+
 
 
 

@@ -31,10 +31,12 @@ e.g.
 > Lists Top Rated Movies of all time endpoint of TMDB.
 
 
+
 #### Top Rated Movies More Info.
 ![Screenshot 2023-08-09 191324](https://github.com/lindmlynch/labMoviesApp/assets/97634723/ded013d1-8750-44a4-9f9c-228c1b016518)
 
 > Displays more info of the Top Rated Movies.
+
 
 
 #### Top Rated Movies filtered by Genre.
@@ -43,10 +45,12 @@ e.g.
 > Shows how the Top Rated Movies can be filtered by genre eg. comedy
 
 
+
 #### Actors Page.
 ![Screenshot 2023-08-09 191425](https://github.com/lindmlynch/labMoviesApp/assets/97634723/d3c293ed-37fb-4e10-b978-84dc3df94073)
 
 > Shows a list of popular actors endpoint of TMDB
+
 
 
 #### Actors Bio.
@@ -55,10 +59,12 @@ e.g.
 > Lists information about actors including bio, birthday and place of birth when info is available
 
 
+
 #### Actors filtered by Name.
 ![Screenshot 2023-08-09 191635](https://github.com/lindmlynch/labMoviesApp/assets/97634723/d4312ef8-1acf-456f-bf62-2c8bf8f662ff)
 
 > Shows how actors can be filtered by name
+
 
 
 #### TV Series Page
@@ -67,16 +73,19 @@ e.g.
 > Shows a list of popular TV series endpoint of TMDB
 
 
+
 #### TV Series filtered by Name
 ![Screenshot 2023-08-09 191733](https://github.com/lindmlynch/labMoviesApp/assets/97634723/54ea8c9c-4bfb-453a-9e14-936f5d5b726c)
 
 > Shows how TV series can be filtered by name
 
 
+
 #### Caching incorporated throughout the App
 ![Screenshot 2023-08-09 191907](https://github.com/lindmlynch/labMoviesApp/assets/97634723/72b53616-5885-42be-aadf-da379a964986)
 
 > An example of how caching is incorporated throughout the new features of the App.
+
 
 
 #### Create Fantasy Movie Form
